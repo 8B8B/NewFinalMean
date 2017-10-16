@@ -1,16 +1,28 @@
 <style>
   h3{
     border-style: solid;
-    margin-top: 600px;
-    padding-top: 15px;
-    padding-left: 440px;
-    padding-bottom: 200px;
-    margin-right: 15px;
+    margin-top: 0px;
+    padding-top: 0px;
+    padding-left: 200px;
+    padding-right: 10px;
+    padding-bottom: 270px;
+    margin-right: 0px;
+    float:left;
+    text-align: left;
+    font-family: futura, "Trebuchet MS", Arial, sans-serif;
   }
     map {
     width:60%;
-    height:50%;
-    position: absolute;
+    height:100%;
+    padding-top: 0px;
+    padding-left: 10px;
+    margin-top: 0px;
+    margin-right: 0px;
+    float:right;
+  }
+  h4{
+    padding-top: 300px;
+    margin-top: 0px;
   }
 </style>
 <section ng-controller="HomeController">
@@ -46,9 +58,10 @@
       <traffic-layer> </traffic-layer>
   </map>
     <h3>
-    &ensp;Detailed Information
+    Detailed Information:
   </h3>
 <br></br>
+<h4>
 <div id="floating-panel">
 <b>Start: </b>
 <select id="start">
@@ -64,3 +77,4 @@
 </select>
 </div>
 </section>
+</h4>
