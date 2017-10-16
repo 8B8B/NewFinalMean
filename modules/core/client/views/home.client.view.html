@@ -1,25 +1,51 @@
+<style>
+  h3{
+    border-style: solid;
+    margin-top: 0px;
+    padding-top: 0px;
+    padding-left: 200px;
+    padding-right: 10px;
+    padding-bottom: 270px;
+    margin-right: 0px;
+    float:left;
+    text-align: left;
+    font-family: futura, "Trebuchet MS", Arial, sans-serif;
+  }
+    map {
+    width:60%;
+    height:100%;
+    padding-top: 0px;
+    padding-left: 10px;
+    margin-top: 0px;
+    margin-right: 0px;
+    float:right;
+  }
+  h4{
+    padding-top: 300px;
+    margin-top: 0px;
+  }
+</style>
 <section ng-controller="HomeController">
     <div id="map"></div>
-    </style>
     <br>
     <div class="boxed">
-    <form> 
+    <form>
       <p> </p>
-      <p> &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; 
+      <p> &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;
       <input type="checkbox" name="demographic" value="demographic" id="demographic">
         <label for="demographic"> Display Demographic Information &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;
-        </label> 
+        </label>
       <input type="checkbox" name="routes" value="routes" id="routes">
         <label for="routes"> Display Bus Routes
-         </label> 
+         </label>
        </p>
-       <p> &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; 
+       <p> &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;
       <input type="checkbox" name="demographic" value="demographic" id="demographic">
         <label for="demographic">  Display Travel Time Comparisons &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;
-        </label> 
+        </label>
       <input type="checkbox" name="routes" value="routes" id="routes">
         <label for="routes"> Display Heat Map
-        </label> 
+        </label>
         <br>
       </p>
     </form>
@@ -27,6 +53,28 @@
   <br>
   <br>
   <br>
-    <map center="[29.651376,-82.337417]" zoom ='14'>
+    <map center="University of Florida" zoom ='14'>
+      <transit-layer> </transit-layer>
+      <traffic-layer> </traffic-layer>
   </map>
+    <h3>
+    Detailed Information:
+  </h3>
+<br></br>
+<h4>
+<div id="floating-panel">
+<b>Start: </b>
+<select id="start">
+<option value="butler plaza, gainesville, fl">Butler Plaza</option>
+<option value="Oak's Mall, gainesville, fl">Oak's Mall</option>
+<option value="downtown gainesville, fl">Downtown Station</option>
+</select>
+<b>Destination: </b>
+<select id="end">
+<option value="butler plaza, gainesville, fl">Butler Plaza</option>
+<option value="Oak's Mall, gainesville, fl">Oak's Mall</option>
+<option value="downtown gainesville, fl">Downtown Station</option>
+</select>
+</div>
 </section>
+</h4>
