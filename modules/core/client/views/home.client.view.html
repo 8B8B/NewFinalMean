@@ -1,80 +1,101 @@
 <style>
+  form{
+    max-width: 550px;
+    margin: 0 auto;
+  }
+  legend{
+    margin-top: 10px;
+  }
   h3{
-    border-style: solid;
     margin-top: 0px;
-    padding-top: 0px;
-    padding-left: 200px;
+    margin-left: 20px;
+    border-style: solid;
+    padding-left: 10px;
     padding-right: 10px;
     padding-bottom: 270px;
-    margin-right: 0px;
-    float:left;
+    float: left;
     text-align: left;
     font-family: futura, "Trebuchet MS", Arial, sans-serif;
   }
-    map {
-    width:60%;
+  map {
+    width: 60%;
     height:100%;
-    padding-top: 0px;
-    padding-left: 10px;
-    margin-top: 0px;
-    margin-right: 0px;
-    float:right;
+    margin-right: 10px;
+    float: right;
   }
   h4{
-    padding-top: 300px;
-    margin-top: 0px;
+    max-width: 100px;
+    margin-top: 300px;
+    margin-left: 20px;
   }
 </style>
+
+
 <section ng-controller="HomeController">
-    <div id="map"></div>
-    <br>
-    <div class="boxed">
+  <div id="map"></div>
+  <br>
+  <div class="boxed">
     <form>
+    <legend> Toggle Between Different Displays: </legend>
       <p> </p>
-      <p> &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;
-      <input type="checkbox" name="demographic" value="demographic" id="demographic">
-        <label for="demographic"> Display Demographic Information &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;
-        </label>
-      <input type="checkbox" name="routes" value="routes" id="routes">
-        <label for="routes"> Display Bus Routes
-         </label>
-       </p>
-       <p> &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;
-      <input type="checkbox" name="demographic" value="demographic" id="demographic">
-        <label for="demographic">  Display Travel Time Comparisons &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;
-        </label>
-      <input type="checkbox" name="routes" value="routes" id="routes">
-        <label for="routes"> Display Heat Map
-        </label>
-        <br>
-      </p>
+        <p>
+        <input type="checkbox" name="demographic" value="demographic" id="demographic">
+          <label for="demographic"> Demographic Information &emsp; &emsp; &emsp; &emsp; &emsp;
+          </label>
+        <input type="checkbox" name="routes" value="routes" id="routes">
+          <label for="routes"> Bus Routes
+          </label>
+        </p>
+        <p>
+        <input type="checkbox" name="demographic" value="demographic" id="demographic">
+          <label for="demographic">  Travel Time Comparisons &emsp; &emsp; &emsp; &emsp; &emsp;
+          </label>
+        <input type="checkbox" name="routes" value="routes" id="routes">
+          <label for="routes"> Heat Map
+          </label>
+        </p>
     </form>
-  </div>
   <br>
   <br>
-  <br>
+
     <map center="University of Florida" zoom ='14'>
       <transit-layer> </transit-layer>
       <traffic-layer> </traffic-layer>
-  </map>
+    <!-- <script>
+        var butler = {lat: 29.6212, lng: -82.3812};
+        var marker = new google.maps.Marker({
+          position: butler,
+          map: map
+        });
+      </script>
+      <script async defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCzcplqLGgsRpnPIhCr_1MhVk2qsVNZwcY&callback=initMap">
+      </script>-->
+    </map>
+
     <h3>
-    Detailed Information:
-  </h3>
-<br></br>
-<h4>
-<div id="floating-panel">
-<b>Start: </b>
-<select id="start">
-<option value="butler plaza, gainesville, fl">Butler Plaza</option>
-<option value="Oak's Mall, gainesville, fl">Oak's Mall</option>
-<option value="downtown gainesville, fl">Downtown Station</option>
-</select>
-<b>Destination: </b>
-<select id="end">
-<option value="butler plaza, gainesville, fl">Butler Plaza</option>
-<option value="Oak's Mall, gainesville, fl">Oak's Mall</option>
-<option value="downtown gainesville, fl">Downtown Station</option>
-</select>
-</div>
+      Detailed Information:
+    </h3>
+
+  <br>
+  <br>
+  <h4>
+    <div id="floating-panel">
+      <b>Start: </b>
+        <select id="start">
+          <option value="butler plaza, gainesville, fl">Butler Plaza</option>
+          <option value="Oak's Mall, gainesville, fl">Oak's Mall</option>
+          <option value="downtown gainesville, fl">Rosa Park's Downtown Station</option>
+          <option value="santa fe, gainesville, fl">Santa Fe College</option>
+        </select>
+      <b>&emsp; &emsp; Destination: </b>
+        <select id="end">
+          <option value="butler plaza, gainesville, fl">Butler Plaza</option>
+          <option value="Oak's Mall, gainesville, fl">Oak's Mall</option>
+          <option value="downtown gainesville, fl">Rosa Park's Downtown Station</option>
+          <option value="santa fe, gainesville, fl">Santa Fe College</option>
+        </select>
+    </div>
+  </h4>
+  </div>
 </section>
-</h4>
