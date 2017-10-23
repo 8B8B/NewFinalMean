@@ -9,7 +9,6 @@ uri:process.env.MONGOHQ_URL||process.env.MONGOLAB_URI||'mongodb://akahn:a123456a
      user: '',
      pass: ''
    },
-
     // Enable mongoose debug mode
     debug: process.env.MONGODB_DEBUG || false
   },
