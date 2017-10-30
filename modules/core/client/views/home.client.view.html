@@ -28,18 +28,7 @@
     margin-top: 300px;
     margin-left: 20px;
   }
-  .box{
-  width: 150px;
-  height: 80px;
-  border-color: black;
-}
- 
-.white{
-  background:#fff;
-}
-.hidden{
-  display: none;
-}
+
 </style>
 
 
@@ -69,8 +58,7 @@
     </form>
   <br>
   <br>
-
-<script >
+  <!--
 var fs = require('fs');
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
@@ -78,19 +66,28 @@ var Demo = require('./DemoSchema.js');
 var config = require('./config');
 var data = require('./demographics.json');
 mongoose.connect(config.db.uri, { useMongoClient: true });
-    $scope.32601 = Demo.find({zip: 32601});
-    $scope.32603 = Demo.find({zip: 32603});
-    $scope.32605 = Demo.find({zip: 32605});
-    $scope.32606 = Demo.find({zip: 32606});
-    $scope.32607 = Demo.find({zip: 32607});
-    $scope.32608 = Demo.find({zip: 32608});
-    $scope.32609 = Demo.find({zip: 32609});
-    $scope.32641 = Demo.find({zip: 32641});
-    $scope.32653 = Demo.find({zip: 32653});
+$scope.32601 = Demo.find({zip: 32601});
+$scope.32603 = Demo.find({zip: 32603});
+$scope.32605 = Demo.find({zip: 32605});
+$scope.32606 = Demo.find({zip: 32606});
+$scope.32607 = Demo.find({zip: 32607});
+$scope.32608 = Demo.find({zip: 32608});
+$scope.32609 = Demo.find({zip: 32609});
+$scope.32641 = Demo.find({zip: 32641});
+$scope.32653 = Demo.find({zip: 32653});
+-->
+<script >
+var toggleVisibility = function(element) {
+    if(element.style.visibility=='visible'){
+        element.style.visibility='hidden';
+    } else {
+        element.style.visibility='visible';
+    }
+};
 </script>
 <span style="display: inline;">
   &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;
-  <button type="button"> 32601 </button>
+  <button type="button" onclick="toggleVisibility(document.getElementById('32601'))"> 32601 </button>
   &emsp;
   <button type="button"> 32603 </button>
   &emsp;
@@ -113,10 +110,10 @@ mongoose.connect(config.db.uri, { useMongoClient: true });
     <ng-map center="University of Florida" zoom ='11'>
       <transit-layer> </transit-layer>
       <traffic-layer> </traffic-layer>
-      <marker position="[29.6422516,-82.3289111]" title="32601"> </marker>
-        <custom-marker position="[29.6422516,-82.3289111]" title="32601">
-         <div class="box white hidden">
-           <p> zip code: 32601
+      <marker position="[29.6422516,-82.3289111]" title="32601">  </marker>
+        <custom-marker position="[29.6522516,-82.3289111]" title="32601">
+         <div class="box white" id="32601">
+           <p> zip code: 32601 <br>
            population: <br>
            median age: <br>
            number of houses: <br>
@@ -126,8 +123,8 @@ mongoose.connect(config.db.uri, { useMongoClient: true });
          </div>
         </custom-marker>
       <marker position="[29.6577485,-82.3479016]" title="32603"></marker>
-        <custom-marker position="[29.6577485,-82.3479016]" title="32603"> 
-         <div class="box white hidden">
+        <custom-marker position="[29.6677485,-82.3479016]" title="32603"> 
+         <div class="box white hide">
            <p> zip code: 32603 <br>
            population: <br>
            median age: <br>
@@ -138,8 +135,8 @@ mongoose.connect(config.db.uri, { useMongoClient: true });
          </div>
         </custom-marker>
       <marker position="[29.6793128,-82.3723105]" title="32605"></marker>
-        <custom-marker position="[29.6793128,-82.3723105]" title="32605"> 
-         <div class="box white hidden">
+        <custom-marker position="[29.6893128,-82.3723105]" title="32605"> 
+         <div  class="box white hide">
            <p> zip code: 32605 <br>
            population: <br>
            median age: <br>
@@ -150,8 +147,8 @@ mongoose.connect(config.db.uri, { useMongoClient: true });
          </div>
         </custom-marker>
       <marker position="[29.6788293,-82.4644445]" title="32606"></marker>
-        <custom-marker position="[29.6788293,-82.4644445]" title="32606"> 
-         <div class="box white hidden">
+        <custom-marker position="[29.6888293,-82.4644445]" title="32606"> 
+         <div class="box white hide">
            <p> zip code: 32606 <br>
            population: <br>
            median age: <br>
@@ -162,8 +159,8 @@ mongoose.connect(config.db.uri, { useMongoClient: true });
          </div>
         </custom-marker>
       <marker position="[29.647247,-82.4156829]" title="32607"></marker>
-        <custom-marker position="[29.647247,-82.4156829]" title="32607"> 
-         <div class="box white hidden">
+        <custom-marker z-index="2" position="[29.657247,-82.4156829]" title="32607"> 
+         <div class="box white hide">
            <p> zip code: 32607 <br>
            population: <br>
            median age: <br>
@@ -174,8 +171,8 @@ mongoose.connect(config.db.uri, { useMongoClient: true });
          </div>
         </custom-marker>
       <marker position="[29.6156734,-82.3659168]" title="32608"></marker>
-        <custom-marker position="[29.6156734,-82.3659168]" title="32608"> 
-         <div class="box white hidden">
+        <custom-marker position="[29.6256734,-82.3659168]" title="32608"> 
+         <div class="box white hide">
            <p> zip code: 32608 <br>
            population: <br>
            median age: <br>
@@ -186,8 +183,8 @@ mongoose.connect(config.db.uri, { useMongoClient: true });
          </div>
         </custom-marker>
       <marker position="[29.7935588,-82.2583297]" title="32609"></marker>
-        <custom-marker position="[29.7935588,-82.2583297]" title="32609"> 
-         <div class="box white hidden">
+        <custom-marker position="[29.8035588,-82.2583297]" title="32609"> 
+         <div class="box white hide">
            <p> zip code: 32609 <br>
            population: <br>
            median age: <br>
@@ -198,8 +195,8 @@ mongoose.connect(config.db.uri, { useMongoClient: true });
          </div>
         </custom-marker>
       <marker position="[29.6311155,-82.2365981]" title="32641"></marker>
-        <custom-marker position="[29.6311155,-82.2365981]" title="32641"> 
-         <div class="box white hidden">
+        <custom-marker position="[29.6411155,-82.2365981]" title="32641"> 
+         <div class="box white hide">
            <p> zip code: 32641 <br>
            population: <br>
            median age: <br>
@@ -210,8 +207,8 @@ mongoose.connect(config.db.uri, { useMongoClient: true });
          </div>
         </custom-marker>
       <marker position="[29.7429556,-82.3777335]" title="32653"></marker>
-        <custom-marker position="[29.7429556,-82.3777335]" title="32653"> 
-         <div class="box white hidden">
+        <custom-marker position="[29.7529556,-82.3777335]" title="32653"> 
+         <div class="box white hide">
            <p> zip code: 32653 <br>
            population: <br>
            median age: <br>
