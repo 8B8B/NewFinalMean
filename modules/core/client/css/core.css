@@ -41,10 +41,12 @@ a:hover .header-profile-image {
   .box{
   width: 150px;
   height: 80px;
-  border:1px solid black;
   z-index: 2;
+  display: none;
 }
  
 .white{
   background:#fff;
+  border:1px solid black;
+  opacity: 0.5;
 }
