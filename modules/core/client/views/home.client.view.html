@@ -59,7 +59,6 @@
         </p>
     </form>
   <br>
-  <br>
   <!--
 var fs = require('fs');
 var mongoose = require('mongoose');
@@ -78,7 +77,17 @@ $scope.32609 = Demo.find({zip: 32609});
 $scope.32641 = Demo.find({zip: 32641});
 $scope.32653 = Demo.find({zip: 32653});
 -->
-<span style="display: inline;">
+
+<script type="text/javascript">
+  function toggleVisibility(element) {
+  if(element.style.display==='none'){
+    element.style.display ='block';
+  } else {
+    element.style.display ='none';
+  }
+};
+</script>
+<span style="display: inline;" id="demographicbuttons">
   &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;
   <button type="button" onclick="toggleVisibility(document.getElementById('32601'))"> 32601 </button>
   &emsp;
@@ -105,111 +114,109 @@ $scope.32653 = Demo.find({zip: 32653});
       <transit-layer> </transit-layer>
       <traffic-layer> </traffic-layer>
       <div id="markers">
-      <custom-marker z-index="1" position="[29.6422516,-82.3289111]" title="32601"> 32601 </custom-marker>
+      <custom-marker z-index="1" position="[29.6422516,-82.3289111]" title="32601"> <span class="zip"> 32601 </span> </custom-marker>
         <custom-marker z-index="2" position="[29.6422516,-82.3289111]">
-         <div class="box white" id="32601" style="display: none;">
-           <p> zip code: 32601 <br>
-           population: <br>
-           median age: <br>
-           number of houses: <br>
-           median income: <br>
-           percent below poverty: <br>
-            </p>
-         </div>
+           <span class="box white" id="32601"> Zip Code: 32601 <br>
+           Population: 18,585<br>
+           Median Age: 24.4<br>
+           Number of Houses: 9,182<br>
+           Median Income: $24,272<br>
+           Percent Below Poverty: 46.90%<br>
+            </span>
         </custom-marker>
-      <custom-marker z-index="1" position="[29.6677485,-82.3479016]" title="32603"> 32603 </custom-marker>
+      <custom-marker z-index="1" position="[29.6677485,-82.3479016]" title="32603"> <span class="zip"> 32603 </span> </custom-marker>
         <custom-marker z-index="2" position="[29.6677485,-82.3479016]"> 
          <div class="box white hide" id="32603">
-           <p> zip code: 32603 <br>
-           population: <br>
-           median age: <br>
-           number of houses: <br>
-           median income: <br>
-           percent below poverty: <br>
+           <p> Zip Code: 32603 <br>
+           Population: 6,741<br>
+           Median Age: 21.1<br>
+           Number of Houses: 2,422<br>
+           Median Income: $20,080<br>
+           Percent Below Poverty: 54.50%<br>
             </p>
          </div>
         </custom-marker>
-      <custom-marker z-index="1" position="[29.6923128,-82.3723105]" title="32605"> 32605 </custom-marker>
+      <custom-marker z-index="1" position="[29.6923128,-82.3723105]" title="32605"> <span class="zip"> 32605 </span> </custom-marker>
         <custom-marker z-index="2" position="[29.6923128,-82.3723105]"> 
          <div  class="box white hide" id="32605">
-           <p> zip code: 32605 <br>
-           population: <br>
-           median age: <br>
-           number of houses: <br>
-           median income: <br>
-           percent below poverty: <br>
+           <p> Zip Code: 32605 <br>
+           Population: 22,925<br>
+           Median Age: 40<br>
+           Number of Houses: 10,459<br>
+           Median Income: $69,264<br>
+           Percent Below Poverty: 12.10%<br>
             </p>
          </div>
         </custom-marker>
-      <custom-marker z-index="1" position="[29.6788293,-82.4644445]" title="32606"> 32606 </custom-marker>
+      <custom-marker z-index="1" position="[29.6788293,-82.4644445]" title="32606"> <span class="zip"> 32606 </span> </custom-marker>
         <custom-marker z-index="2" position="[29.6788293,-82.4644445]"> 
          <div class="box white hide" id="32606">
-           <p> zip code: 32606 <br>
-           population: <br>
-           median age: <br>
-           number of houses: <br>
-           median income: <br>
-           percent below poverty: <br> 
+           <p> Zip Code: 32606 <br>
+           Population: 21,833<br>
+           Median Age: 36.8<br>
+           Number of Houses: 10,600<br>
+           Median Income: $59,122<br>
+           Percent Below Poverty: 10.10%<br> 
             </p>
          </div>
         </custom-marker>
-      <custom-marker z-index="1" position="[29.647247,-82.4156829]" title="32607"> 32607 </custom-marker>
+      <custom-marker z-index="1" position="[29.647247,-82.4156829]" title="32607"> <span class="zip"> 32607 </span> </custom-marker>
         <custom-marker z-index="2" position="[29.647247,-82.4156829]"> 
          <div class="box white hide" id="32607">
-           <p> zip code: 32607 <br>
-           population: <br>
-           median age: <br>
-           number of houses: <br>
-           median income: <br>
-           percent below poverty: <br>
+           <p> Zip Code: 32607 <br>
+           Population: 29,750<br>
+           Median Age: 25.1<br>
+           Number of Houses: 14,802<br>
+           Median Income: $33,724<br>
+           Percent Below Poverty: 35.40%<br>
             </p>
          </div>
         </custom-marker>
-      <custom-marker z-index="1" position="[29.6156734,-82.3659168]" title="32608"> 32608 </custom-marker>
+      <custom-marker z-index="1" position="[29.6156734,-82.3659168]" title="32608"> <span class="zip"> 32608 </span> </custom-marker>
         <custom-marker z-index="2" position="[29.6156734,-82.3659168]"> 
          <div class="box white hide" id="32608">
-           <p> zip code: 32608 <br>
-           population: <br>
-           median age: <br>
-           number of houses: <br>
-           median income: <br>
-           percent below poverty: <br>
+           <p> Zip Code: 32608 <br>
+           Population: 45,842<br>
+           Median Age: 28<br>
+           Number of Houses: 23,245<br>
+           Median Income: $40,465<br>
+           Percent Below Poverty: 29.40%<br>
             </p>
          </div>
         </custom-marker>
-      <custom-marker z-index="1" position="[29.7935588,-82.2583297]" title="32609"> 32609 </custom-marker>
+      <custom-marker z-index="1" position="[29.7935588,-82.2583297]" title="32609"> <span class="zip"> 32609 </span> </custom-marker>
         <custom-marker z-index="2" position="[29.7935588,-82.2583297]"> 
          <div class="box white hide" id="32609">
-           <p> zip code: 32609 <br>
-           population: <br>
-           median age: <br>
-           number of houses: <br>
-           median income: <br>
-           percent below poverty: <br> 
+           <p> Zip Code: 32609 <br>
+           Population: 18,756<br>
+           Median Age: 36.1<br>
+           Number of Houses: 7,999<br>
+           Median Income: $28,569<br>
+           Percent Below Poverty: 32.80%<br>
             </p>
          </div>
         </custom-marker>
-      <custom-marker z-index="1" position="[29.6311155,-82.2365981]" title="32641"> 32641 </custom-marker>
+      <custom-marker z-index="1" position="[29.6311155,-82.2365981]" title="32641"> <span class="zip"> 32641 </span> </custom-marker>
         <custom-marker z-index="2" position="[29.6311155,-82.2365981]"> 
          <div class="box white hide" id="32641">
-           <p> zip code: 32641 <br>
-           population: <br>
-           median age: <br>
-           number of houses: <br>
-           median income: <br>
-           percent below poverty: <br>
+           <p> Zip Code: 32641 <br>
+           Population: 14,291<br>
+           Median Age: 34.9<br>
+           Number of Houses: 5,290<br>
+           Median Income: $30,091<br>
+           Percent Below Poverty: 32.80%<br>
             </p>
          </div>
         </custom-marker>
-      <custom-marker z-index="1" position="[29.7429556,-82.3777335]" title="32653"> 32653 </custom-marker>
+      <custom-marker z-index="1" position="[29.7429556,-82.3777335]" title="32653"> <span class="zip"> 32653 </span> </custom-marker>
         <custom-marker z-index="2" position="[29.7429556,-82.3777335]"> 
          <div class="box white hide" id="32653">
-           <p> zip code: 32653 <br>
-           population: <br>
-           median age: <br>
-           number of houses: <br>
-           median income: <br>
-           percent below poverty: <br>
+           <p> Zip Code: 32653 <br>
+           Population: 13,107<br>
+           Median Age: N/A<br>
+           Number of Houses: 6,085<br>
+           Median Income: $64,570<br>
+           Percent Below Poverty: N/A<br>
             </p>
          </div>
         </custom-marker>

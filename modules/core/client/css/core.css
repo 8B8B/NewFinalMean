@@ -50,3 +50,7 @@ a:hover .header-profile-image {
   border:1px solid black;
   display: none;
 }
+.zip{
+  font-size: 20px;
+  color: red;
+}
