@@ -48,7 +48,7 @@ a:hover .header-profile-image {
 .white{
   background:#fff;
   border:1px solid black;
-  display: none;
+  display: block;
 }
 .zip{
   font-size: 20px;
