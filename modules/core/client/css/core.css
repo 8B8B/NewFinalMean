@@ -38,3 +38,15 @@ a:hover .header-profile-image {
 .boxed {
   border: 1px solid black ;
 }
+  .box{
+  width: 150px;
+  height: 80px;
+  z-index: 2;
+  display: none;
+}
+ 
+.white{
+  background:#fff;
+  border:1px solid black;
+  display: none;
+}
