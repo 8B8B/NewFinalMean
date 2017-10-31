@@ -99,15 +99,6 @@ $scope.32653 = Demo.find({zip: 32653});
   <button type="button" onclick="toggleVisibility(document.getElementById('32653'))"> 32653 </button>
 </span>
 
-<script >
-var toggleVisibility = function(element) {
-    if(element.style.display=='block'){
-        element.style.display ='none';
-    } else {
-        element.style.display ='block';
-    }
-};
-</script>
 <br>
 <br>
     <ng-map center="University of Florida" zoom ='12'>
@@ -116,7 +107,7 @@ var toggleVisibility = function(element) {
       <div id="markers">
       <custom-marker z-index="1" position="[29.6422516,-82.3289111]" title="32601"> 32601 </custom-marker>
         <custom-marker z-index="2" position="[29.6422516,-82.3289111]">
-         <div class="box white" id="32601">
+         <div class="box white" id="32601" style="display: none;">
            <p> zip code: 32601 <br>
            population: <br>
            median age: <br>
@@ -128,7 +119,7 @@ var toggleVisibility = function(element) {
         </custom-marker>
       <custom-marker z-index="1" position="[29.6677485,-82.3479016]" title="32603"> 32603 </custom-marker>
         <custom-marker z-index="2" position="[29.6677485,-82.3479016]"> 
-         <div class="box white" id="32603">
+         <div class="box white hide" id="32603">
            <p> zip code: 32603 <br>
            population: <br>
            median age: <br>
@@ -140,7 +131,7 @@ var toggleVisibility = function(element) {
         </custom-marker>
       <custom-marker z-index="1" position="[29.6923128,-82.3723105]" title="32605"> 32605 </custom-marker>
         <custom-marker z-index="2" position="[29.6923128,-82.3723105]"> 
-         <div  class="box white" id="32605">
+         <div  class="box white hide" id="32605">
            <p> zip code: 32605 <br>
            population: <br>
            median age: <br>
@@ -152,7 +143,7 @@ var toggleVisibility = function(element) {
         </custom-marker>
       <custom-marker z-index="1" position="[29.6788293,-82.4644445]" title="32606"> 32606 </custom-marker>
         <custom-marker z-index="2" position="[29.6788293,-82.4644445]"> 
-         <div class="box white" id="32606">
+         <div class="box white hide" id="32606">
            <p> zip code: 32606 <br>
            population: <br>
            median age: <br>
@@ -164,7 +155,7 @@ var toggleVisibility = function(element) {
         </custom-marker>
       <custom-marker z-index="1" position="[29.647247,-82.4156829]" title="32607"> 32607 </custom-marker>
         <custom-marker z-index="2" position="[29.647247,-82.4156829]"> 
-         <div class="box white" id="32607">
+         <div class="box white hide" id="32607">
            <p> zip code: 32607 <br>
            population: <br>
            median age: <br>
@@ -176,7 +167,7 @@ var toggleVisibility = function(element) {
         </custom-marker>
       <custom-marker z-index="1" position="[29.6156734,-82.3659168]" title="32608"> 32608 </custom-marker>
         <custom-marker z-index="2" position="[29.6156734,-82.3659168]"> 
-         <div class="box white" id="32608">
+         <div class="box white hide" id="32608">
            <p> zip code: 32608 <br>
            population: <br>
            median age: <br>
@@ -188,7 +179,7 @@ var toggleVisibility = function(element) {
         </custom-marker>
       <custom-marker z-index="1" position="[29.7935588,-82.2583297]" title="32609"> 32609 </custom-marker>
         <custom-marker z-index="2" position="[29.7935588,-82.2583297]"> 
-         <div class="box white" id="32609">
+         <div class="box white hide" id="32609">
            <p> zip code: 32609 <br>
            population: <br>
            median age: <br>
@@ -200,7 +191,7 @@ var toggleVisibility = function(element) {
         </custom-marker>
       <custom-marker z-index="1" position="[29.6311155,-82.2365981]" title="32641"> 32641 </custom-marker>
         <custom-marker z-index="2" position="[29.6311155,-82.2365981]"> 
-         <div class="box white" id="32641">
+         <div class="box white hide" id="32641">
            <p> zip code: 32641 <br>
            population: <br>
            median age: <br>
@@ -212,7 +203,7 @@ var toggleVisibility = function(element) {
         </custom-marker>
       <custom-marker z-index="1" position="[29.7429556,-82.3777335]" title="32653"> 32653 </custom-marker>
         <custom-marker z-index="2" position="[29.7429556,-82.3777335]"> 
-         <div class="box white" id="32653">
+         <div class="box white hide" id="32653">
            <p> zip code: 32653 <br>
            population: <br>
            median age: <br>
